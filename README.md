@@ -4,14 +4,19 @@
 var queue = new LoadQueue();
 
 queue.maxConnections = 1;
+
 queue.add(['imgurl',...]);
+
 queue.on('load', function (e) {
+
     // console.log('load:', e.detail.src, queue.getLoaded(), queue.getTotal());
+
 }).on('complete', function (e) {
     
 }).on('error', function (e) {
     
 });
+
 queue.start();
 
 ## Documentation
@@ -96,4 +101,4 @@ queue.start();
 
 ## Thanks
 
-参考自Hilo[@mourner](http://hiloteam.github.io/Hilo/docs/api-zh/index.html)/LoadQueue.
+参考自[Hilo](http://hiloteam.github.io/Hilo/docs/api-zh/index.html)/LoadQueue.
