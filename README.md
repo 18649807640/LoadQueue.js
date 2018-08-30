@@ -1,13 +1,18 @@
 # LoadQueue.js 是一个队列下载工具
 ## Example
 
-To test you can install the npm dependencies:
+var queue = new LoadQueue();
 
-    npm install
-
-and then use:
-
-    jake test
+queue.maxConnections = 1;
+queue.add(['imgurl',...]);
+queue.on('load', function (e) {
+    // console.log('load:', e.detail.src, queue.getLoaded(), queue.getTotal());
+}).on('complete', function (e) {
+    
+}).on('error', function (e) {
+    
+});
+queue.start();
 
 ## Documentation
 
@@ -15,6 +20,7 @@ and then use:
     maxConnections:Int 同时下载的最大连接数。默认为2。
 
 方法:
+
     add(source:Object|Array):LoadQueue
         增加要下载的资源。可以是单个资源对象或多个资源的数组。
         parameters
