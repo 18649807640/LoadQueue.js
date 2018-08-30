@@ -1,5 +1,5 @@
-# LoadQueue.js
-## Testing
+# LoadQueue.js 是一个队列下载工具
+## use
 
 To test you can install the npm dependencies:
 
